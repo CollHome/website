@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% macro ferrors(field) %}
+{% if field.errors %}
+		<ul class=errors>
+			{% for error in field.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endmacro %}
+
+{# Render Field in Form #}
+{# http://flask.pocoo.org/docs/0.12/patterns/wtforms/ #}
+{% macro rf(field) %}
+  <div class="field">
+	  {{ field.label }}
+	{{ field(**kwargs)|safe }}
+	{{ ferrors(field) }}
+  </div>
+{% endmacro %}
+
+{% block content %}
+<h2>{% block title %}{% endblock %}</h2>
+<form method="post" action="">
+	{{ form.csrf_token }}
+	{% block form %}{% endblock %}
+	<div>{{ form.submit() }}</div>
+</form>
+{% if form.errors['csrf_token'] %}
+<p class="flash">Your copy of this form is out-of-date.
+Please submit again.</p>
+{% for e in form.errors['csrf_token'] %}
+<p>{{ e }}</p>
+{% endfor %}
+{% endif %}
+{% endblock %}

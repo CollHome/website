@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+
+<p><a href="/register">Register as a Student Organization</a></p>
+
+<h3 id="about">About Us</h3>
+<p>We are a student organization dedicated to making care for your loved ones
+easier through technology!</p>
+
+<div id="chapters">
+	<h4>Chapters</h4>
+	<table>
+		{% for r in rows %}
+		<tr>
+			{% for d in r %}
+			<td>{{ d }}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}
