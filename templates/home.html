@@ -11,6 +11,7 @@ easier through technology!</p>
 
 <div id="chapters">
 	<h4>Chapters</h4>
+	{% if rows %}
 	<table>
 		<thead>
 			<th>University</th>
@@ -27,5 +28,6 @@ easier through technology!</p>
 		</tr>
 		{% endfor %}
 	</table>
+	{% endif %}
 </div>
 {% endblock %}

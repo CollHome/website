@@ -14,6 +14,7 @@ class Chapter(Base):
     __tablename__ = "Chapters"
     id = Column(Integer, primary_key=True)
     university = Column(String)
+    location = Column(String)
     contactname = Column(String)
     chapteremail = Column(String)
     founderemails = Column(String)
@@ -21,9 +22,10 @@ class Chapter(Base):
 emailregex = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
 
 class Register(FlaskForm):
-    university = StringField("University From Which Chapter is Based", validators=[DataRequired()])
+    university = StringField("Name of University", validators=[DataRequired()])
+    location = StringField("University Location", validators=[DataRequired()])
     contactname = StringField("Name of Primary Contact", validators=[DataRequired()])
-    chapteremail = StringField("Official Chapter Email", validators=[DataRequired()])
+    chapteremail = StringField("Public Chapter Email", validators=[DataRequired()])
     founderemails = StringField("Emails of Founding Chapter Members (Separate with commas)")
     submit = SubmitField("Submit")
 
