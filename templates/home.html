@@ -12,11 +12,18 @@ easier through technology!</p>
 <div id="chapters">
 	<h4>Chapters</h4>
 	<table>
+		<thead>
+			<th>University</th>
+			<th>Contact Name</th>
+			<th>Chapter Email</th>
+			<th>Founder Emails</th>
+		</thead>
 		{% for r in rows %}
 		<tr>
-			{% for d in r %}
-			<td>{{ d }}</td>
-			{% endfor %}
+			<td>{{ r.university }}</td>
+			<td>{{ r.contactname }}</td>
+			<td>{{ r.chapteremail }}</td>
+			<td>{{ r.founderemails }}</td>
 		</tr>
 		{% endfor %}
 	</table>
