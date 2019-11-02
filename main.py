@@ -13,7 +13,7 @@ register.Base.query = db.query_property()
 register.Base.metadata.create_all(bind=engine, checkfirst=True)
 
 app = Flask(__name__)
-app.secret_key = os.urandom(16)
+app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(16)
 
 @app.route("/")
 def home():
