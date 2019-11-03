@@ -9,12 +9,18 @@
 </head>
 <body>
 <section class="header">
-	<div id="logo">CollHome</div>
-</section>
-<section class="content">
+	<div id="logo">
+		<img src="{{ url_for('static', filename='CollHome.png') }}" />
+	</div>
 	{% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
   	{% endfor %}
+	<div id="menu">
+		<a href="/chapters">Chapters</a>
+		<a href="/register">Register a new Chapter</a>
+	</div>
+</section>
+<section class="content">
 	{% block content %}{% endblock %}
 </section>
 

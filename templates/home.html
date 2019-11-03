@@ -2,34 +2,9 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-
-<p><a href="/register">Register as a Student Organization</a></p>
-
-<h3 id="about">About Us</h3>
+<div id="about">
+<h3>About Us</h3>
 <p>We are a student organization dedicated to making care for your loved ones
 easier through technology!</p>
-
-<div id="chapters">
-	<h4>Chapters</h4>
-	{% if rows %}
-	<table>
-		<thead>
-			<th>University</th>
-			<th>Location</th>
-			<th>Contact Name</th>
-			<th>Chapter Email</th>
-			<th>Founder Emails</th>
-		</thead>
-		{% for r in rows %}
-		<tr>
-			<td>{{ r.university }}</td>
-			<td>{{ r.location }}</td>
-			<td>{{ r.contactname }}</td>
-			<td>{{ r.chapteremail }}</td>
-			<td>{{ r.founderemails }}</td>
-		</tr>
-		{% endfor %}
-	</table>
-	{% endif %}
 </div>
 {% endblock %}

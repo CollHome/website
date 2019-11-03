@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div id="chapters">
+	<h4>Chapters</h4>
+	{% if rows %}
+	<table>
+		<thead>
+			<th>University</th>
+			<th>Location</th>
+			<th>Contact Name</th>
+			<th>Chapter Email</th>
+			<th>Founder Emails</th>
+		</thead>
+		{% for r in rows %}
+		<tr>
+			<td>{{ r.university }}</td>
+			<td>{{ r.location }}</td>
+			<td>{{ r.contactname }}</td>
+			<td>{{ r.chapteremail }}</td>
+			<td>{{ r.founderemails }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+</div>
+{% endblock %}

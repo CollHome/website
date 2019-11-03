@@ -21,10 +21,9 @@ def shutdown_session(exception=None):
 
 @app.route("/")
 def home():
-    q = db.query(register.Chapter).all()
-    return render_template("home.html", rows=q)
+    return render_template("home.html")
 
-@app.route("/register/", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def registerform():
     form = register.Register()
     if form.validate_on_submit():
@@ -38,6 +37,10 @@ def registerform():
         return redirect(url_for("home"))
     return render_template("register.html", form=form)
 
+@app.route("/chapters")
+def chapters():
+    q = db.query(register.Chapter).all()
+    return render_template("chapters.html", rows=q)
 
 if __name__ == "__main__":
     app.run()
