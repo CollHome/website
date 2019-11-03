@@ -4,6 +4,7 @@
 {% block content %}
 <div id="chapters">
 	<h4>Chapters</h4>
+	<iframe src="https://www.google.com/maps/d/embed?mid=1OK4YaYLvohyFYjJD0TXAabz1r-JPvwwu" width="640" height="480"></iframe>
 	{% if rows %}
 	<table>
 		<thead>
@@ -11,7 +12,6 @@
 			<th>Location</th>
 			<th>Contact Name</th>
 			<th>Chapter Email</th>
-			<th>Founder Emails</th>
 		</thead>
 		{% for r in rows %}
 		<tr>
@@ -19,7 +19,6 @@
 			<td>{{ r.location }}</td>
 			<td>{{ r.contactname }}</td>
 			<td>{{ r.chapteremail }}</td>
-			<td>{{ r.founderemails }}</td>
 		</tr>
 		{% endfor %}
 	</table>
