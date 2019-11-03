@@ -35,12 +35,27 @@ table {
 	padding: 10px;
 }
 
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	#menu a {
 		display: block;
+		margin-bottom: 5px;
 	}
 
 	/* Force table to not be like tables anymore */
@@ -59,7 +74,8 @@ only screen and (max-width: 760px),
 		border: none;
 		border-bottom: 1px solid #eee;
 		position: relative;
-		padding-left: 50%;
+		padding-left: 40%;
+		padding-bottom: 2px;
 	}
 	td:before {
 		/* Now like a table header */
