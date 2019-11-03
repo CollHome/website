@@ -3,7 +3,7 @@
 	padding: 5px;
 }
 
-#logo {
+#logo, p {
 	text-align: center;
   	display: block;
 	margin-left: auto;
