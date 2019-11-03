@@ -12,7 +12,7 @@ Base = declarative_base()
 
 class Chapter(Base):
     __tablename__ = "Chapters"
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     university = Column(String)
     location = Column(String)
     contactname = Column(String)
