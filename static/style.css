@@ -21,7 +21,7 @@ label {
 	padding-top: 0px;
 }
 
-#menu > a {
+#menu a {
 	font-size: 150%;
 	box-shadow: 1px 1px #666;
 	color: #333;
@@ -38,6 +38,10 @@ table {
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	#menu a {
+		display: block;
+	}
 
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr {
