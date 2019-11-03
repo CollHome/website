@@ -35,6 +35,11 @@ table {
 	padding: 10px;
 }
 
+#search {
+	padding: 10px;
+	margin: 10px;
+}
+
 .iframe-container {
   overflow: hidden;
   padding-top: 56.25%;
