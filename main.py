@@ -23,7 +23,7 @@ def shutdown_session(exception=None):
 def home():
     return render_template("home.html")
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/register/", methods=["GET", "POST"])
 def registerform():
     form = register.Register()
     if form.validate_on_submit():
