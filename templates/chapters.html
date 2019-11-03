@@ -8,7 +8,8 @@
 	<iframe src="https://www.google.com/maps/d/embed?mid=1OK4YaYLvohyFYjJD0TXAabz1r-JPvwwu"></iframe>
 	</div>
 	{% if rows %}
-	<table>
+	<input type="text" id="search" onkeyup="search()" placeholder="Search for a chapter..">
+	<table id="chapters">
 		<thead>
 			<th>University</th>
 			<th>Location</th>
